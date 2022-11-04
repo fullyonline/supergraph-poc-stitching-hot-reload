@@ -1,0 +1,17 @@
+{
+  "name": "supergraph-federation",
+  "version": "1.0.0",
+  "description": "supergraph using apollo federation approach",
+  "main": "index.js",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "start": "yarn compose && yarn router",
+    "compose": "rover supergraph compose --elv2-license accept --config ./supergraph-config.yaml > supergraph-schema.graphql",
+    "router": "cross-env ./router --config router.yaml --dev --supergraph supergraph-schema.graphql"
+  },
+  "devDependencies": {
+    "@apollo/rover": "0.9.1",
+    "cross-env": "7.0.3"
+  }
+}

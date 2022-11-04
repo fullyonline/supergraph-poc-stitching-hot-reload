@@ -1,0 +1,16 @@
+{
+  "name": "Leistungserfassung K6 GraphQL Schema",
+  "schemaPath": "schemainterpoliert.graphql",
+  "includes": ["src/*.graphql"],
+  "extensions": {
+    "endpoints": {
+      "Default GraphQL Endpoint": {
+        "url": "http://localhost:4500/graphql",
+        "headers": {
+          "user-agent": "JS GraphQL"
+        },
+        "introspect": true
+      }
+    }
+  }
+}
